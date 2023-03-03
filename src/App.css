@@ -1,38 +1,178 @@
 .App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+* {
+  font-family: 'Klee One', cursive;
+}
+
+h1 {
+  font-size: 3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-wrap{
+  width: 100%;
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text-warp {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.text{
+  width: 60%;
+  background-image: url(../public/memo.png);
+  text-align: center;
+  padding: 90px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+button{
+  border: none;
+  background-color: #fff;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+.btn-emergency {
+  position: relative;
+
+  display: block;
+
+  width: 200px;
+  height: 130px;
+  margin: 0 auto;
+}
+
+.btn-emergency:hover .btn-emergency-top {
+  top: 10px;
+
+  height: 50px;
+}
+
+.btn-emergency:active .btn-emergency-top {
+  top: 20px;
+
+  height: 40px;
+}
+
+.btn-emergency-top {
+  position: absolute;
+  top: 0;
+  left: 20px;
+
+  width: 160px;
+  height: 60px;
+  margin-top: 30px;
+
+  -webkit-transition: all 0.3s;
+
+  transition: all 0.3s;
+
+  border-radius: 0 0 50% 50%;
+  background: #d62d2d;
+}
+
+.btn-emergency-top:before {
+  position: absolute;
+  top: -30px;
+  left: 0;
+
+  width: 160px;
+  height: 60px;
+
+  content: "";
+
+  border-radius: 80px / 30px;
+  background: #ed4c4c;
+}
+
+.btn-emergency-top span {
+  font-size: 30px;
+  font-weight: bold;
+
+  position: absolute;
+  top: -24px;
+  left: 0;
+
+  width: 100%;
+
+  -webkit-transform: scaleY(0.75);
+
+  transform: scaleY(0.75);
+  text-align: center;
+
+  color: #f6a3a3;
+}
+
+.btn-emergency-bottom {
+  position: absolute;
+  top: 38px;
+  left: 0;
+
+  width: 200px;
+  height: 80px;
+
+  border-radius: 100px / 40px;
+  background: #d8e4ea;
+  -webkit-box-shadow: 0 8px 0 #c4cacc;
+  box-shadow: 0 8px 0 #c4cacc;
+}
+
+.text p:nth-child(1){
+  font-size: 3rem;
+  font-weight: bold;
+}
+.text p:nth-child(2){
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+/* @media screen and (max-width: 700px) {
+  .text{
+    padding: 35px;
+  }
+} */
